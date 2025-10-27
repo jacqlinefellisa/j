@@ -1,0 +1,349 @@
+/* Variabel Warna Tema Natal */
+:root {
+    --color-primary: #C0392B; /* Merah Natal */
+    --color-secondary: #27AE60; /* Hijau Pinus */
+    --color-accent: #F1C40F; /* Emas */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --font-heading: 'Pacifico', cursive; /* Font Ceria untuk Heading/Logo */
+    --font-body: 'Poppins', sans-serif; /* Font Jelas untuk Konten */
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: #f7f7f7; /* Latar Belakang Cukup Terang */
+}
+
+/* 🎅 Header dan Navigasi */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.2em;
+    color: var(--color-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.desktop-nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.desktop-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-icons i {
+    font-size: 1.2em;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-icons i:hover {
+    color: var(--color-accent);
+}
+
+.menu-toggle {
+    display: none; /* Sembunyikan di desktop */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* 🌟 Hero Section (Banner Utama) */
+.hero {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    padding: 60px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s, opacity 0.3s;
+    /* Animasi: Sedikit membesar saat dihover */
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Animasi: Berkedip lembut */
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 🛍️ Product Section */
+main {
+    padding: 40px 5%;
+}
+
+.product-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #1e8449;
+}
+
+/* 🦌 Animasi Sinterklas */
+.sinterklas-animation {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+    background-color: rgba(var(--color-primary), 0.05); /* Latar Belakang Merah Muda */
+    border-radius: 10px;
+}
+
+.sinterklas-animation i {
+    font-size: 3em;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 10px;
+    /* Animasi: Gerak horizontal */
+    animation: sleigh-fly 15s linear infinite;
+}
+
+@keyframes sleigh-fly {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+/* 🎁 Footer */
+footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons i {
+    font-size: 1.5em;
+    margin-left: 15px;
+    cursor: pointer;
+    color: var(--color-text-light);
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: var(--color-accent);
+}
+
+/* 📱 Responsivitas (Tampilan Mobile) */
+@media (max-width: 768px) {
+    /* Navigasi Mobile */
+    .desktop-nav {
+        display: none; /* Sembunyikan navigasi desktop */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        z-index: 10;
+        padding: 10px 0;
+    }
+    
+    .desktop-nav.active {
+        display: block; /* Tampilkan saat menu aktif */
+    }
+
+    .desktop-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .desktop-nav ul li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-toggle {
+        display: block; /* Tampilkan tombol menu */
+    }
+
+    .header-icons {
+        display: none; /* Sembunyikan ikon di header mobile */
+    }
+
+    /* Hero Section Mobile */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    /* Tombol Beli Sekarang Mengambang (Mobile Only) */
+    .mobile-buy-button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-accent);
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+    
+    #buyNowMobile {
+        background-color: var(--color-primary);
+        color: var(--color-text-light);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        font-weight: bold;
+        width: 90%;
+        cursor: pointer;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+    }
+}
+
+/* Sembunyikan floating button di tampilan desktop */
+@media (min-width: 769px) {
+    .mobile-buy-button {
+        display: none;
+    }
+}
